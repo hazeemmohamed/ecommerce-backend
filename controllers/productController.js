@@ -1,7 +1,7 @@
 const productModel = require("../models/productModel");
 const cloudinary = require("../config/cloudinary");
 
-// ================== GET PRODUCTS ==================
+//GetProduct
 exports.getProducts = async (req, res) => {
   try {
     const page = Number(req.query.page) || 1;
@@ -32,7 +32,7 @@ exports.getProducts = async (req, res) => {
   }
 };
 
-// ================== GET SINGLE PRODUCT ==================
+//Get single Product
 exports.getSingleProducts = async (req, res) => {
   try {
     const product = await productModel.findById(req.params.id);
